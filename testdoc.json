@@ -1,0 +1,1215 @@
+{
+   "basePath": "http://localhost:8080",
+   "apis": [
+      {
+         "methods": [
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "dd6cb446-07d9-4373-9952-4524cba32fb6",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "45611f7b-edcc-457c-8601-9092acfc5a24",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [{
+                  "jsondocId": "bbd0bbab-65d3-4601-9bad-7dd5ea2e98b2",
+                  "description": "The project id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "4a9a0557-8a07-4f04-a783-b156cbce3853",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "0fe763eb-3e93-4f7c-b3e2-c998eb62d2d1",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "56f3bd9d-d5a5-42a8-9449-220eb36e799a",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "260142a0-c2a6-44cc-9e35-975d0fa86c99",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get a project",
+               "queryparameters": [],
+               "path": "/api/project/{id}.json",
+               "produces": ["application/json"],
+               "methodName": "show"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "37777a5e-4913-4c0a-9970-8be1cae15864",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "108a99d0-295f-44bd-86d7-08389fcf35b8",
+                  "mapValueObject": "",
+                  "object": "command history",
+                  "multiple": "false"
+               },
+               "pathparameters": [{
+                  "jsondocId": "749d9882-23ef-4a36-983a-76efffb016af",
+                  "description": "The project id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "080a2112-b828-405e-a793-9acb91d8bb70",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "e8388b18-0383-487a-9bbf-e5c451264652",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "4682e8e9-d62b-46df-9db1-880259a5ec37",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "5d48060a-eb10-4260-8943-893e1bc2c75c",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get the last action for a project",
+               "queryparameters": [
+                  {
+                     "jsondocId": "7066e879-a7b7-43ed-ac42-422636c3b67e",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "c41ff677-867b-42a3-801a-e588905f5d9b",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/project/{id}/last/{max}.json",
+               "produces": ["application/json"],
+               "methodName": "lastAction"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "ce195d5e-262d-4135-92e6-1de4aabe2165",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "850fbf40-2162-40f6-b879-bae5267f562d",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [],
+               "apierrors": [
+                  {
+                     "jsondocId": "9049c8db-a801-46a5-86f8-a2683a8dc7c1",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "8e748ccd-43c8-4bd9-aefe-9d07b73a2929",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "9e777073-35f6-485f-8de6-91467aae03c0",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "da6265ea-7e20-4f68-9fb5-6cb901eafbfd",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get the last opened projects for the current user",
+               "queryparameters": [
+                  {
+                     "jsondocId": "d67c7a8a-cced-4cce-bc60-7ad5c8dad9c5",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "32637353-5c4f-4c86-8dd6-7ceb49a0a408",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/project/method/lastopened.json",
+               "produces": ["application/json"],
+               "methodName": "listLastOpened"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "85445442-8079-429c-82bf-8ea956c29117",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "08fba5be-d3d5-4f69-8f69-47ace963d733",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [{
+                  "jsondocId": "f5e78381-e76b-4706-823e-329e40c4d20f",
+                  "description": "The software id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "9c5d5f59-e405-4a4b-8f7b-e1c7a7dfb14a",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "0907e24d-44a8-44b8-bbb4-0e76938803b5",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "1498f7ed-1f61-49d8-a0d4-4363662ad6f0",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "71004ed0-7d77-48ab-a84b-c0cff12b86b1",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get projects available for the current user that can use a specific software",
+               "queryparameters": [
+                  {
+                     "jsondocId": "2b1116e0-6dfd-4f44-b738-2fcd6d7444f1",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "34cc91be-52b1-474c-83ba-f5642fdb81e0",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/software/{id}/project.json",
+               "produces": ["application/json"],
+               "methodName": "listBySoftware"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "0e392738-2098-4e18-b825-def1d07d8717",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "eedbb3f9-5c24-4280-8af9-18095c57e942",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [{
+                  "jsondocId": "99e3280c-9931-4af2-abb8-fe85cbd24dd3",
+                  "description": "The ontology id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "04284426-d32c-43ba-8ed8-18c1487a0e6f",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "7d9edd86-79eb-4fa2-a850-a164029059c0",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "213c8455-83e9-4824-b41c-fcc552cdec0b",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "82743dca-adf8-42dd-8070-8201f9268eab",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get projects available for the current user that can use a specific ontology",
+               "queryparameters": [
+                  {
+                     "jsondocId": "c864c03b-d1d0-4b55-bbcd-62089cc6a69b",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "b115aa6f-3998-410d-b6f1-83b50a77339d",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/ontology/{id}/project.json",
+               "produces": ["application/json"],
+               "methodName": "listByOntology"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "dfefe4e1-74fa-420c-8530-9ee58f84fe22",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "33625f07-8b7d-4dba-8676-911bf178af17",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [{
+                  "jsondocId": "4d61b971-8668-43ff-8b74-75c130d3b295",
+                  "description": "The user id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "dff79d4b-9ead-46b7-8963-14048515f7dc",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "60ce37e2-1489-49b7-9e4a-b054b9edf77e",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "a89ef6c5-ecb7-40f7-8a9f-42dc6feef678",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "2b99495d-35a6-4ae6-bbe0-ccbc6ee557c7",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get projects available for the current user and available for a specific user",
+               "queryparameters": [
+                  {
+                     "jsondocId": "f25603b7-4801-4475-91e1-437adcbeb998",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "c0a79425-41e2-4ab9-ab9a-ead0d6135e71",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/user/{id}/project.json",
+               "produces": ["application/json"],
+               "methodName": "listByUser"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "a1b861c3-08f6-4d9f-8b9b-bb3dc11b1d46",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "720999d2-49eb-48e9-9399-7ddebdd3cccc",
+                  "mapValueObject": "",
+                  "object": "project (light)",
+                  "multiple": "false"
+               },
+               "pathparameters": [{
+                  "jsondocId": "25ae2919-6c6f-4c85-bccf-362e6de5bfe5",
+                  "description": "The user id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "05193084-b1a6-4189-ab36-2acdd441380c",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "29fb9e89-3b87-4b24-b65b-fea2b99b3d73",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "ac611be5-0c7f-4bf2-92b8-0894fb2511af",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "30afa7c4-2bab-471f-95a6-94f6fd1ebb0e",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get projects available for the current user and available for a specific user in a specific role (user, admin, creator). ",
+               "queryparameters": [
+                  {
+                     "jsondocId": "d628a120-4924-4e83-9318-dfd14864103d",
+                     "description": "filter by creator",
+                     "name": "creator",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "true",
+                     "type": "boolean"
+                  },
+                  {
+                     "jsondocId": "791fe8a7-b3b2-4698-b67b-eea00992c0d9",
+                     "description": "filter by admin",
+                     "name": "admin",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "true",
+                     "type": "boolean"
+                  },
+                  {
+                     "jsondocId": "e0512898-b340-4709-af69-37da19c6bf90",
+                     "description": "filter by user",
+                     "name": "user",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "true",
+                     "type": "boolean"
+                  },
+                  {
+                     "jsondocId": "ebc2e96d-85e2-47d1-85d3-3139129efb39",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "1c4ec34a-4ce4-4c9f-a1b7-66558daf9db9",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/user/{id}/project/light.json",
+               "produces": ["application/json"],
+               "methodName": "listLightByUser"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "9fc4b6ae-3139-45c6-90de-b7b5473f30df",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "e7d3a80d-13a8-414d-b40b-300c5ee1e72d",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [{
+                  "jsondocId": "922f35e5-24e9-4a06-9dc8-0db873d7f910",
+                  "description": "The project id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "f5bbca70-cc0b-444b-9441-a78f0ef8edb5",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "398729b2-b2d1-4cab-ac6d-73c8c8e6bb53",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "0a7ad45c-3f2e-471f-8783-3a3d500f930e",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "a92e209f-d658-433a-a744-c9edc6e7a69b",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "List all retrieval-project for a specific project. The suggested term can use data from other project (with same ontology).",
+               "queryparameters": [
+                  {
+                     "jsondocId": "2ebe7ef3-d6a7-4a08-b6cf-e7e723b793d2",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "7f2451ca-ff75-46c7-962e-7390235c9386",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/retrieval/{id}/project.json",
+               "produces": ["application/json"],
+               "methodName": "listRetrieval"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "b3482238-74d2-4a03-ba92-963179313f66",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "49f86936-2ede-4024-b304-db26172c1b59",
+                  "mapValueObject": "",
+                  "object": "commandHistory",
+                  "multiple": "false"
+               },
+               "pathparameters": [{
+                  "jsondocId": "2bc8a0c5-fbab-4750-8625-571c70bd48ed",
+                  "description": "The project id (if null: all projects)",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "649acabb-4c61-4ca2-a5de-d16cbb0b438c",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "8ac10aed-536d-409a-8280-dee614e4716f",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "0a9e13b0-29f5-422a-bf98-08d02a0160d5",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "10d7ca6b-4e34-4f82-98d3-a9c427ad318f",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get the last action for a user in a project or in all projects available for the current user",
+               "queryparameters": [
+                  {
+                     "jsondocId": "621573b5-687a-4bae-8606-d8a98320e9f6",
+                     "description": "The user id",
+                     "name": "user",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "true",
+                     "type": "long"
+                  },
+                  {
+                     "jsondocId": "9e2b70bb-72c0-428c-8fe8-84f15c54f36e",
+                     "description": "Flag to include the full JSON of the data field on each command history. Not recommended for long listing.",
+                     "name": "fullData",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "true",
+                     "type": "boolean"
+                  },
+                  {
+                     "jsondocId": "0b7354e6-d6a8-4d03-94d4-89d4e69abef5",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "1e7e42e4-aea7-4f43-8c7f-6ae021550951",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/commandhistory.json",
+               "produces": ["application/json"],
+               "methodName": "listCommandHistory"
+            },
+            {
+               "headers": [],
+               "bodyobject": {
+                  "mapKeyObject": "",
+                  "jsondocId": "2cd1c68f-1c8e-4a46-8d9f-03fbf9fde5c5",
+                  "mapValueObject": "",
+                  "map": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "jsondocId": "0353ff4d-4e8d-4ee5-8957-ca6f78f34e4b",
+               "consumes": ["application/json"],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "9c2a2fa2-a922-4c13-aefc-e7aaed9b1cda",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [],
+               "apierrors": [
+                  {
+                     "jsondocId": "fc992b79-325c-49e4-9abd-c82277caf4bf",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "ac4d88e7-c78e-40ee-91dd-b8e8a9267073",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "4d733414-f530-4537-b013-1f422aa2cdbd",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "c6cb971c-57a8-40e1-9317-740b004d8ccb",
+                     "description": "Object not found",
+                     "code": "404"
+                  },
+                  {
+                     "jsondocId": "d14b5061-763d-415d-88a9-2782f13baaae",
+                     "description": "Object already exist",
+                     "code": "409"
+                  }
+               ],
+               "verb": "POST",
+               "description": "Add a new project",
+               "queryparameters": [],
+               "path": "/api/project.json",
+               "produces": ["application/json"],
+               "methodName": "add"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "15207286-e696-405e-b490-771d71fe4309",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "4d1d84b6-df2f-41d7-98bc-80c4db21aaf0",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [],
+               "apierrors": [
+                  {
+                     "jsondocId": "10457db6-5439-4ea2-b55e-d1caaeee48d0",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "206e859a-8532-4bf1-929e-9cdc92ed5edc",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "708103c5-7a4d-4396-a8c9-88c826b91ec0",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "1565c925-4be0-455c-a0ff-d934b4045090",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get project listing, according to your access",
+               "queryparameters": [
+                  {
+                     "jsondocId": "94344c0a-ab43-485a-9e11-ba2bcb337a79",
+                     "description": "Pagination: Number of record per page (default 0 = no pagination)",
+                     "name": "max",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  },
+                  {
+                     "jsondocId": "4ebd3cc2-d65f-4019-b632-50374432986b",
+                     "description": "Pagination: Offset of first record (default 0 = first record)",
+                     "name": "offset",
+                     "allowedvalues": [],
+                     "format": "",
+                     "required": "false",
+                     "type": "int"
+                  }
+               ],
+               "path": "/api/project.json",
+               "produces": ["application/json"],
+               "methodName": "list"
+            },
+            {
+               "headers": [],
+               "bodyobject": null,
+               "jsondocId": "f11c261c-6844-4a8e-bde1-281ec2c12a27",
+               "consumes": [],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "c2b0db78-1a78-4626-9cc5-e999b60a1f23",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [{
+                  "jsondocId": "8ddb4bb5-814f-401c-899c-9c2d6527f9ca",
+                  "description": "The project id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "f39a3db6-1716-4d0f-811d-29855ac9bda2",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "49f10619-fb48-4a1f-bba9-7980ffe13ca8",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "956420ed-f760-4e36-ae36-52e62f0bf0cc",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "cf99c23c-f77e-4500-ae86-871cefeb7e43",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "DELETE",
+               "description": "Delete a project",
+               "queryparameters": [],
+               "path": "/api/project/{id}.json",
+               "produces": ["application/json"],
+               "methodName": "delete"
+            },
+            {
+               "headers": [],
+               "bodyobject": {
+                  "mapKeyObject": "",
+                  "jsondocId": "38833148-b228-4096-ae90-7319632b1203",
+                  "mapValueObject": "",
+                  "map": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "jsondocId": "e052ef05-01e0-406b-b5d2-c81f793dcf2c",
+               "consumes": ["application/json"],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "f32fd2dd-af43-419f-8641-a3c59fcd96fd",
+                  "mapValueObject": "",
+                  "object": "project",
+                  "multiple": "Unknow"
+               },
+               "pathparameters": [{
+                  "jsondocId": "9c0f3b45-6249-4691-8578-296a9f45bfb3",
+                  "description": "The project id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "int"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "3f622bae-4337-4bba-a799-dde4b71e4925",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "af6d9bf1-6466-466e-be13-53d535130ada",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "de8c4892-426a-46d6-9fd8-90b897c23f88",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "53a78548-0f2f-4059-bb58-12ca806ada75",
+                     "description": "Object not found",
+                     "code": "404"
+                  },
+                  {
+                     "jsondocId": "4a7719f2-9c1a-4b58-919f-6cfd591b975f",
+                     "description": "Object already exist",
+                     "code": "409"
+                  }
+               ],
+               "verb": "PUT",
+               "description": "Update a project",
+               "queryparameters": [],
+               "path": "/api/project/{id}.json",
+               "produces": ["application/json"],
+               "methodName": "update"
+            }
+         ],
+         "jsondocId": "20560fde-5121-49ef-85fe-2338f988bbaa",
+         "description": "Methods for managing projects",
+         "name": "project services",
+          "domain" : "project"
+      }
+
+   ],
+   "objects": [
+      {
+         "jsondocId": "5a008ddf-9d5d-459f-8fa5-fdd8c308dcef",
+         "description": "A project is the main cytomine domain, its a workspace to store images, annotations,...",
+         "name": "project",
+         "fields": [
+            {
+               "jsondocId": "fec562f9-6ef7-4a31-9211-254897faa30f",
+               "description": "The full class name of the domain",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "class",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "string",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "22b386d9-0319-4484-8f3f-437801e97b77",
+               "description": "The domain id",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "id",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "cedcd3b1-3316-482d-9b77-ecb3421ef7bc",
+               "description": "The date of the domain creation",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "created",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Date",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "2e1fcca4-0597-4169-a729-a7b9eec9ea35",
+               "description": "The date of the domain modification",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "updated",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Date",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "4894d7d4-062b-4913-be84-d6b7cd8a71d7",
+               "description": "When domain was removed from Cytomine",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "deleted",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Date",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "b60b0ede-5df0-4c55-9d04-4831cc27f060",
+               "description": "The name of the project",
+               "presentInResponse": true,
+               "mandatory": true,
+               "name": "name",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": null,
+               "type": "String",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "2c41a1cf-78c4-49f7-9607-8a2699dc330f",
+               "description": "The ontology identifier of the project",
+               "presentInResponse": true,
+               "mandatory": true,
+               "name": "ontology",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": null,
+               "type": "long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "f2698faf-3ded-4773-b94f-8d72fce7df80",
+               "description": "The ontology name for the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "ontologyName",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "string",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "8febd51b-3228-4ee4-bcf1-113bdbb9451d",
+               "description": "The discipline identifier of the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "discipline",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": "0 or null if domain",
+               "type": "long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "b59adb3a-41de-4fa0-86a1-f3e760790d4c",
+               "description": "Blind mode (if true, image filename are hidden)",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "blindMode",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": "Undefined",
+               "type": "Boolean",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "f4ef8cc0-4ceb-47bf-8dbe-8b22bbfcfe60",
+               "description": "The discipline name for the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "disciplineName",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "string",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "e122d588-1842-454c-a601-885cca400ad7",
+               "description": "The number of samples in the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "numberOfSlides",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "98532472-c256-4c02-911b-62a3db82cb2d",
+               "description": "Number of image in the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "numberOfImages",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "aac83d8e-179c-4bde-945e-6454eb414bf4",
+               "description": "Number of annotations created by human user in the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "numberOfAnnotations",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "6015dd60-2077-45e7-ad1a-07b56ba73edc",
+               "description": "Number of annotations created by software in the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "numberOfJobAnnotations",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "ce56e160-1d70-4ffc-8c19-54ea6c34e2b7",
+               "description": "List all projects id that are used for retrieval search (if retrievalDisable = false and retrievalAllOntology = false)",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "retrievalProjects",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": "[]",
+               "type": "list",
+               "multiple": "true"
+            },
+            {
+               "jsondocId": "58f3ade9-f913-4b9b-b761-294912141943",
+               "description": "Number of annotations validated in the project",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "numberOfReviewedAnnotations",
+               "allowedvalues": null,
+               "useForCreation": false,
+               "format": null,
+               "defaultValue": null,
+               "type": "Long",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "f71b0322-9516-4b95-a3f6-5c0a4c2ad0ef",
+               "description": "If true, don't suggest similar annotations",
+               "presentInResponse": true,
+               "mandatory": true,
+               "name": "retrievalDisable",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": null,
+               "type": "Boolean",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "1bf9f6e0-6024-412c-b418-83865b808f7d",
+               "description": "If true, search similar annotations on all project that share the same ontology",
+               "presentInResponse": true,
+               "mandatory": true,
+               "name": "retrievalAllOntology",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": null,
+               "type": "Boolean",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "3bfb745f-aa27-4c94-84e6-a84d1a6ec827",
+               "description": "If true, project is closed",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "isClosed",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": "Undefined",
+               "type": "Boolean",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "987adb21-1ca6-47c4-9a6f-8bc2c597fcba",
+               "description": "If true, project is in read only mode",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "isReadOnly",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": "Undefined",
+               "type": "Boolean",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "fcc4ea91-0a4a-4b2a-a478-55b1548dcbe4",
+               "description": "If true, an user (which is not an administrator of the project) cannot see others users layers",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "hideUsersLayers",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": "Undefined",
+               "type": "Boolean",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "c76f38d5-3de9-4fe6-bf01-80a3d36cee69",
+               "description": "If true, an user (which is not an administrator of the project) cannot see admins layers",
+               "presentInResponse": true,
+               "mandatory": false,
+               "name": "hideAdminsLayers",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": "Undefined",
+               "type": "Boolean",
+               "multiple": "false"
+            },
+            {
+               "jsondocId": "31d57126-1f04-4ccd-958b-26787063951b",
+               "description": "Admins id that will be in the project",
+               "presentInResponse": false,
+               "mandatory": true,
+               "name": "admins",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": null,
+               "type": "list",
+               "multiple": "true"
+            },
+            {
+               "jsondocId": "89915e3b-6321-4bda-9370-ac8af3951831",
+               "description": "Users id that will be in the project",
+               "presentInResponse": false,
+               "mandatory": true,
+               "name": "users",
+               "allowedvalues": null,
+               "useForCreation": true,
+               "format": null,
+               "defaultValue": null,
+               "type": "list",
+               "multiple": "true"
+            }
+         ]
+      }
+   ],
+   "version": "0.1"
+}

@@ -1,0 +1,27 @@
+{
+  "class": "be.cytomine.project.Project",
+  "id": 110,
+  "created": "1397120830688",
+  "updated": null,
+  "deleted": null,
+  "name": "TESTGET",
+  "ontology": 100,
+  "ontologyName": "TESTGET",
+  "discipline": null,
+  "blindMode": false,
+  "disciplineName": null,
+  "numberOfSlides": 0,
+  "numberOfImages": 0,
+  "numberOfAnnotations": 0,
+  "numberOfJobAnnotations": 0,
+  "retrievalProjects": 
+  [
+  ],
+  "numberOfReviewedAnnotations": 0,
+  "retrievalDisable": true,
+  "retrievalAllOntology": false,
+  "isClosed": false,
+  "isReadOnly": false,
+  "hideUsersLayers": false,
+  "hideAdminsLayers": false
+}
